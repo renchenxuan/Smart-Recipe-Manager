@@ -1,0 +1,13 @@
+# 模型配置
+MODEL_NAME=openai
+OPENAI_API_KEY=
+GOOGLE_API_KEY=
+DASHSCOPE_API_KEY=
+ZHIPUAI_API_KEY=
+
+# 界面设置
+THEME=light
+LANGUAGE=zh
+
+# 数据存储
+DATABASE_URL=sqlite:///recipe_manager.db

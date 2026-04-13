@@ -1,0 +1,401 @@
+/* 自定义主题样式 */
+:root {
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --primary-disabled: #a5d6a7;
+    --secondary-color: #f8fff8;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-color: #E0E0E0;
+    --card-bg: #FFFFFF;
+    --hover-bg: #F8F8F8;
+    --upload-bg: #f0f7ff;
+    --upload-hover: #e3f2fd;
+    --upload-drag: #bbdefb;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 主容器样式 */
+.gradio-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* 卡片样式 */
+.gradio-container .card {
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    transition: all 0.3s ease;
+    padding: 28px;
+    margin-bottom: 24px;
+}
+
+.gradio-container .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* 按钮样式 */
+.gradio-container .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.gradio-container .btn-primary:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.gradio-container .btn-primary:disabled {
+    background-color: var(--primary-disabled);
+    cursor: not-allowed;
+}
+
+.gradio-container .btn-right {
+    text-align: right;
+}
+
+/* 标签样式 */
+.gradio-container .tab-nav {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 28px;
+}
+
+.gradio-container .tab-nav .tab {
+    padding: 18px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-light);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gradio-container .tab-nav .tab:hover {
+    color: var(--primary-color);
+}
+
+.gradio-container .tab-nav .tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* 输入框样式 */
+.gradio-container input[type="text"],
+.gradio-container input[type="number"],
+.gradio-container select,
+.gradio-container textarea {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gradio-container input[type="text"]:focus,
+.gradio-container input[type="number"]:focus,
+.gradio-container select:focus,
+.gradio-container textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
+    outline: none;
+}
+
+/* 表单标签 */
+.gradio-container label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* 图片上传区域 */
+.gradio-container .upload {
+    border: 3px solid var(--border-color);
+    border-radius: 16px;
+    padding: 60px 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: var(--upload-bg);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gradio-container .upload:hover {
+    border-color: var(--primary-color);
+    background-color: var(--upload-hover);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
+}
+
+.gradio-container .upload svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.gradio-container .upload .upload-text-main {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.gradio-container .upload .upload-text-sub {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+.gradio-container .upload .upload-link {
+    color: #2196F3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.gradio-container .upload .upload-link:hover {
+    color: #1976D2;
+}
+
+/* 标题样式 */
+.gradio-container h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.gradio-container h2 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.gradio-container h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+/* 标题角标 */
+.gradio-container .title-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+/* 文本框样式 */
+.gradio-container .textbox {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 18px;
+    background-color: var(--card-bg);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 表格样式 */
+.gradio-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.gradio-container th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.gradio-container th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.gradio-container th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.gradio-container td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gradio-container tr:last-child td {
+    border-bottom: none;
+}
+
+.gradio-container tr:hover td {
+    background-color: var(--hover-bg);
+}
+
+/* 操作按钮 */
+.gradio-container .action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.gradio-container .action-btn:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.1);
+}
+
+.gradio-container .action-btn.edit:hover {
+    color: #2196F3;
+}
+
+.gradio-container .action-btn.delete:hover {
+    color: #f44336;
+}
+
+/* 空状态 */
+.gradio-container .empty-state {
+    text-align: center;
+    padding: 60px 40px;
+    color: var(--text-light);
+}
+
+.gradio-container .empty-state svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.gradio-container .empty-state p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* 行和列布局 */
+.gradio-container .row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+}
+
+.gradio-container .column {
+    flex: 1;
+    min-width: 0;
+}
+
+.gradio-container .column-left {
+    flex: 0.6;
+}
+
+.gradio-container .column-right {
+    flex: 0.4;
+}
+
+/* 表单字段 */
+.gradio-container .form-field {
+    margin-bottom: 20px;
+}
+
+/* 加载动画 */
+.gradio-container .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .gradio-container .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .gradio-container .column-left,
+    .gradio-container .column-right {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .gradio-container {
+        padding: 16px;
+    }
+    
+    .gradio-container .card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .gradio-container h1 {
+        font-size: 28px;
+    }
+    
+    .gradio-container h2 {
+        font-size: 20px;
+    }
+    
+    .gradio-container h3 {
+        font-size: 18px;
+    }
+    
+    .gradio-container .upload {
+        padding: 40px 20px;
+        min-height: 280px;
+    }
+    
+    .gradio-container th,
+    .gradio-container td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+}
